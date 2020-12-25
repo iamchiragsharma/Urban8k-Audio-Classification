@@ -52,12 +52,30 @@ The workflow of project:
 
 * **Validation** : ANN, CNN and RNN all were tested apparently CNN perform best. Apparently after reading it seems that MFCC features are not time-related they are independent segments and hence RNN perform poorly.
 
+## Key Aspects of the Project
+
+* OOPS Oriented : The whole project is pythonic and implments OOPS concepts wherever necessary all of the model are object oriented and they inherit a base model that calculates accuracy loss and steps for it.
+
+* CNN Dynamic Model : The code below can generata a CNN Model without writing pytorch code for it. The Dynamic Class inherits UrbanSoundBase Class which contains all of the ways to handle training_step, validation_step, epoch_end_calculations without user explicitly writing. 
+
+```python
+input = torch.randn(32,1,40,174)
+input_channels = 1
+cnn_hidden_channels = [16, 32, 32, 64]
+hidden_sizes = [128]
+output_size = 10
+sample_image_batch_dim = (32,1,40,174)
+model = DynamicModel(input_channels, cnn_hidden_channels, hidden_sizes, output_size, sample_image_batch_dim)
+```
+
 ## Results :
 
-### Linear Models
+* Highest Accuracy of 88% was achieved using shallow CNNs.
+* ANNs scored in range of 76-78% but fluctuated drastically.
+
+### ANN/Linear Models
 
 ![Model1](src/model_nn_simple_50_epochs_SGD.png)
-
 
 ![Model2](src/model_nn_simple_4layers_50_epochs_SGD.png)
 
