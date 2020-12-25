@@ -48,7 +48,7 @@ The workflow of project:
 <img src="src/sounds_mfcc.png">
 
 
-* **Model & Training** : The models are hosted in github gists. Each notebook has multiple models for comparitive accuracy and loss tracking. CNN Notebook has one additional feature of dynamic model generation, where user can directly mention the hyperparameters and the model will be create on it's own without writing a single line of code for it.
+* **Model & Training** : The models are hosted in github gists. Each notebook has multiple models for comparitive accuracy and loss tracking. CNN Notebook has one additional feature of dynamic model generation, where user can directly mention the hyperparameters and the model will be create on it's own without writing a single line of code for it. The models folder contains models tried during this project. However the github gists are clone as well while running the notebooks.
 
 * **Validation** : ANN, CNN and RNN all were tested apparently CNN perform best. Apparently after reading it seems that MFCC features are not time-related they are independent segments and hence RNN perform poorly.
 
